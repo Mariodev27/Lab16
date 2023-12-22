@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab16.Views.UsersPage"
+             Title="Users">
+    <StackLayout>
+        <ListView x:Name="UsersListView" ItemsSource="{Binding Users}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="10">
+                                <Frame CornerRadius="10" Padding="0">
+                                    <StackLayout Padding="5">
+                                        <Label Text="{Binding Name}" FontSize="Medium" />
+                                        <Label Text="{Binding Email}" />
+                                        <Label Text="{Binding Country}" />
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
